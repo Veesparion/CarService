@@ -1,0 +1,5 @@
+﻿@model CarService.Models.ButtonsPartialModel
+
+<a type="button" class="btn btn-sm @Model.ButtonType" href="@Url.Action(Model.Action)@Model.ActionParameters" style="font-size:1.25em">
+    <i class="@Model.Icon"></i><span class="sr-only">@Model.Text</span>
+</a>

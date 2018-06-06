@@ -1,0 +1,33 @@
+﻿@model CarService.Models.ButtonsPartialModel
+
+<td>
+    <div class="btn-group" role="group">
+        @Html.Partial("_ButtonsPartial",
+          new ButtonsPartialModel
+          {
+              Action = "Edit",
+              ButtonType = "btn-primary",
+              Icon = "fas fa-edit",
+              Text = "Edit",
+              ServiceId = Model.ServiceId
+          })
+        @Html.Partial("_ButtonsPartial",
+          new ButtonsPartialModel
+          {
+              Action = "Details",
+              ButtonType = "btn-success",
+              Icon = "fas fa-clipboard-list",
+              Text = "Details",
+              ServiceId = Model.ServiceId
+          })
+        @Html.Partial("_ButtonsPartial",
+         new ButtonsPartialModel
+         {
+             Action = "Delete",
+             ButtonType = "btn-danger",
+             Icon = "far fa-trash-alt",
+             Text = "Delete",
+             ServiceId = Model.ServiceId
+         })
+    </div>
+</td>
